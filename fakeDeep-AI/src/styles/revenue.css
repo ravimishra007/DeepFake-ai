@@ -1,0 +1,232 @@
+.revenue-container {
+  /* border: 2px solid red; */
+  /* margin-top: 150px; */
+  /* border: 10px solid; */
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin-top: 150px !important;
+  /* border-image: fill 0 linear-gradient(#0001, #010314); */
+  background: linear-gradient(180deg, rgba(1, 3, 20, 0) 70%, #050113 100%);
+}
+.revenue-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/revenue_bg.png") no-repeat center center;
+  background-size: cover;
+
+  filter: blur(80px); /* Adjust the blur value as needed */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+  /* transform: scale(1.1); 
+  Optional: slightly enlarge to compensate for blur edge effects/ */
+}
+
+.revenue-container h1 {
+  margin-top: 60px;
+  font-family: Outfit;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 64.8px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffffff 30%,
+    rgba(255, 255, 255, 0.5) 84.77%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.revenue-container p {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.revenue-lower-Container {
+  padding: 10px;
+  gap: 10px;
+}
+.revenue-1stDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid #ccc; */
+  width: 50%;
+  margin: auto;
+  /* margin-left: 40px; */
+}
+.revenue-2ndDiv {
+  /* margin-left: -40px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid #ccc; */
+  width: 50%;
+  margin: auto;
+}
+.revenue-lower-Container div .span1 {
+  font-family: Roboto;
+  font-size: 132px;
+  font-weight: 600;
+  line-height: 178.13px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffffff 30%,
+    rgba(255, 255, 255, 0.5) 84.77%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.revenue-lower-Container div .span2 {
+  font-family: Roboto;
+  width: 230px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 42.19px;
+  letter-spacing: 0.0075em;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffffff 30%,
+    rgba(255, 255, 255, 0.5) 84.77%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1024px) and (min-width: 870px) {
+  .revenue-container h1 {
+    font-size: 45px;
+  }
+  .revenue-container p {
+    font-size: 15px;
+  }
+  .span1 {
+    font-size: 90px !important;
+  }
+  .span2 {
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 870px) and (min-width: 768px) {
+  .revenue-container h1 {
+    font-size: 40px;
+  }
+  .revenue-1stDiv {
+    width: 40%;
+  }
+  .revenue-2ndDiv {
+    width: 40%;
+  }
+
+  .span1 {
+    font-size: 80px !important;
+  }
+  .span2 {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .revenue-container h1 {
+    font-size: 40px;
+  }
+  .revenue-1stDiv {
+    width: 50%;
+    height: 100px;
+    margin: auto;
+  }
+  .revenue-2ndDiv {
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    margin-top: -80px;
+  }
+
+  .span1 {
+    font-size: 60px !important;
+  }
+  .span2 {
+    font-size: 16px !important;
+    line-height: 22.8px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .revenue-container {
+    margin-top: 100px !important;
+    height: auto !important;
+  }
+  .revenue-container h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .revenue-1stDiv {
+    width: 60%;
+    height: 100px;
+    margin: auto;
+  }
+  .revenue-2ndDiv {
+    width: 60%;
+    height: 100px;
+    margin: auto;
+    margin-top: -80px;
+  }
+  .revenue-container p {
+    font-size: 15px;
+    margin-top: -30px;
+    line-height: 22.8px !important;
+  }
+
+  .span1 {
+    font-size: 40px !important;
+  }
+  .span2 {
+    font-size: 16px !important;
+    line-height: 22.8px !important;
+  }
+}
+@media (max-width: 378px) {
+  .revenue-1stDiv {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+  }
+  .revenue-2ndDiv {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    margin-top: -80px;
+  }
+  .revenue-container p {
+    font-size: 15px;
+    margin-top: -30px;
+    line-height: 22.8px !important;
+  }
+
+  .span1 {
+    font-size: 40px !important;
+  }
+  .span2 {
+    font-size: 16px !important;
+    line-height: 22.8px !important;
+  }
+}
+@media (max-width: 450px) {
+  .revenue-container h1 {
+    font-size: 37px !important;
+  }
+}

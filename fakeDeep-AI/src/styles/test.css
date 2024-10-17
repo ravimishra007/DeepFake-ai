@@ -1,0 +1,114 @@
+.main-container {
+  width: 100%;
+  margin-top: 100px;
+  box-sizing: border-box;
+}
+.main-container h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+  .upper-container {
+    /* border: 2px solid red; */
+    position: relative;
+    width: 80%;
+    height: 450px;
+    margin: auto;
+    background-color: aliceblue;
+    border-radius: 30px;
+    margin-right: 115px;
+    padding: 10px;
+  }
+  
+  
+  .inner-cutout1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 35%;
+    background-color:  #010314;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 30px;
+    border-top: none;
+    border-left: none;
+  }
+  
+  .inner-cutout1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background-color: aliceblue;
+  }
+  
+
+
+
+
+  .lower-container {
+    position: relative;
+    width: 80%;
+    height: 450px;
+    margin: auto;
+    /* border: 5px solid red; */
+    clip-path: polygon(
+        50% 0,
+        50% 35%,
+        100% 35%,
+        100% 100%,
+        50% 100%,
+        0 100%,
+        0 0
+    );
+    background-color: aliceblue;
+    border-radius: 30px;
+    margin-left: 115px;
+    padding: 10px;
+    margin-top: -100px;
+    z-index: 0;
+
+}
+
+.inner-cutout2 {
+    position: absolute; 
+    background-color: #010314;
+    border-bottom-left-radius: 18.6875px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    height:60px;
+    width: 60px;
+    margin-left: 518px;
+    margin-top: 97px;
+    z-index: 1; 
+}
+
+
+
+/* 
+.🥹{
+  background-color: rgb(20, 20, 20);
+  border-bottom-left-radius: 13.6875px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  box-sizing: border-box;
+  color: rgb(243, 239, 239);
+  display: block;
+  font-family: "Haffer SQ", sans-serif;
+  font-size: 15.208333px;
+  font-weight: 400;
+  height: 38.015625px;
+  line-height: 21.291664px;
+  text-rendering: optimizelegibility;
+  width: 38.015625px;
+  -webkit-font-smoothing: antialiased;
+  border-bottom: 2px solid #664DFF;
+} */

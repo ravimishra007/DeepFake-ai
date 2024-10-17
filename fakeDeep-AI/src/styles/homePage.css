@@ -1,0 +1,158 @@
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+  .card{
+    margin-left: 250px;  
+    width: 830px;
+    height: 410px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+  }
+.card .imgbox{
+  position: relative;
+  width: 100%;
+  height: 240px;
+  border: 2px solid #664DFF;
+  background: linear-gradient(180deg, rgba(111, 60, 247,0) 62.44%, #6F3CF7 100%);
+  border-radius: 20px;
+
+}
+
+.card .imgbox::before{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: -10px 10px 0 #010314;
+}
+.card .imgbox::after{
+  content:'';
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: -10px 10px 0 #010314;
+}
+
+
+.card .content{
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: blue;
+  border-radius: 20px;
+  border-top-left-radius: 0;
+}
+.card .content .price{
+  position: absolute;
+  top: -80px;
+  height: 80px;
+  width: 50%;
+  background-color: blue;
+    border-top:20px solid #010314 ;
+    border-right:20px solid #010314 ;
+    border-top-right-radius: 30px;
+}  
+
+.card .content .price::before{
+content:'';
+position:absolute;
+width: 25px;
+height: 25px;
+/* background-color: red; */
+background-color: transparent;
+border-radius: 50%;
+box-shadow: -10px -10px 0 #010314 ;
+}
+
+.card .content .price::after{
+  content:'';
+  position:absolute;
+  bottom: 0;
+  right: -25px;
+  width: 25px;
+  height: 25px;
+  background-color:transparent;
+  border-radius: 50% ;
+  box-shadow: -10px 10px 0 blue;
+  }
+
+
+
+
+
+
+
+  
+  .main-container h2{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.6px;
+    letter-spacing: 0.4em;
+    text-align: left;
+    background: linear-gradient(95.02deg, #4467FF 13.23%, #7241FF 81.63%);
+    -webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+padding: 5px;
+margin-left: 10px;
+}
+
+.main-container h1{
+    height: 38px;
+    font-family: Roboto;
+font-size: 32px;
+font-weight: 700;
+line-height: 38.4px;
+text-align: left;
+background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 30%, rgba(255, 255, 255, 0.5) 84.77%);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-left: 10px;
+}
+
+.main-container p{
+    font-family: Roboto;
+    width: 60%;
+font-size: 16px;
+font-weight: 400;
+line-height: 25.6px;
+text-align: left;
+margin-left: 10px;
+color: #77798F;
+}
+
+
+.copyIcon{
+  cursor: pointer;
+  color: rgb(199, 196, 196);
+}
+
+
+.skelton-container{
+  position: relative;
+  top: -220px;
+  float: right;
+  margin-bottom: -50px;
+  margin-right: 40px;
+height: 300px;
+width: 200px;
+}
+.skelton-container img{
+height: 320px;
+width: 300px;
+}

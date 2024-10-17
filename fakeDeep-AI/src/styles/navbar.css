@@ -1,0 +1,545 @@
+
+/* navbar */
+
+  nav{
+    z-index: 10;
+  }
+  .nav-buttons .btn1{
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    height: 56px;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28.426px;
+border: 2px solid #1E1F30;
+background: var(--Black, #010314);
+box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+outline: none;
+overflow: hidden;
+
+
+    }
+
+    .btn1:hover {
+      transform: scale(1.05);
+      border:1px solid #fff9;
+    }
+    
+    /* .btn1:active {
+      transform: scale(.90);
+      border:1px solid #fff9;
+    }
+     */
+    
+    .btn1:hover::before {
+      animation: shine 1.5s ease-out infinite;
+    }
+    
+    .btn1::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100%;
+      background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+      );
+      top: 0;
+      left: -100px;
+      opacity: 0.6;
+    }
+    
+    @keyframes shine {
+      0% {
+        left: -100px;
+      }
+    
+      60% {
+        left: 100%;
+      }
+    
+      to {
+        left: 100%;
+      }
+    }
+
+
+    
+
+
+
+
+      /* .nav-buttons .btn2{
+        display: flex;
+        height: 56px;
+        padding: 16px 48px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 28.426px;
+    border: 2px solid #1E1F30;
+    background: var(--Black, #010314);
+    border-radius: 100px;
+border: 1px solid #4467FF;
+background: radial-gradient(58.25% 50% at 50% 0%, #071A69 0%, #010314 71.5%);
+box-shadow: 0px 0px 7.107px 0px rgba(119, 68, 255, 0.70);
+        }
+       */
+
+
+
+
+
+
+
+
+       /* .btn2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #4467FF;
+        box-shadow: 0px 0px 7.107px 0px rgba(119, 68, 255, 0.70);
+
+        width: 11rem;
+        overflow: hidden;
+        height: 56px;
+        background-size: 300% 300%;
+        backdrop-filter: blur(1rem);
+        border-radius: 5rem;
+        transition: 0.5s;
+        animation: gradient_301 5s ease infinite;
+        background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #8F51EA 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+      }
+      
+      .container-stars {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: 0.5s;
+        backdrop-filter: blur(1rem);
+        border-radius: 5rem;
+      }
+      
+      .btn001 {
+        z-index: 2;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+      
+      .glow {
+        position: absolute;
+        display: flex;
+        width: 12rem;
+      }
+      
+      .circle {
+        width: 100%;
+        height: 30px;
+        filter: blur(2rem);
+        animation: pulse_3011 4s infinite;
+        z-index: -1;
+      }
+      
+      .circle:nth-of-type(1) {
+        background: rgba(254, 83, 186, 0.636);
+      }
+      
+      .circle:nth-of-type(2) {
+        background: rgba(142, 81, 234, 0.704);
+      }
+      
+      .btn2:hover .container-stars {
+        z-index: 1;
+        background-color: radial-gradient(58.25% 50% at 50% 0%, #071A69 0%, #010314 71.5%);
+      }
+      
+      .btn2:hover {
+        transform: scale(1.1)
+      }
+      
+      .btn2:active {
+        border: double 4px #FE53BB;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        animation: none;
+      }
+      
+      .btn2:active .circle {
+        background: #FE53BB;
+      }
+      
+      .stars {
+        position: relative;
+        background: transparent;
+        width: 200rem;
+        height: 200rem;
+      }
+      
+      .stars::after {
+        content: "";
+        position: absolute;
+        top: -10rem;
+        left: -100rem;
+        width: 100%;
+        height: 100%;
+        animation: animStarRotate 90s linear infinite;
+      }
+      
+      .stars::after {
+        background-image: radial-gradient(#ffffff 1px, transparent 1%);
+        background-size: 50px 50px;
+      }
+      
+      .stars::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 170%;
+        height: 500%;
+        animation: animStar 60s linear infinite;
+      }
+      
+      .stars::before {
+        background-image: radial-gradient(#ffffff 1px, transparent 1%);
+        background-size: 50px 50px;
+        opacity: 0.5;
+      }
+      
+      @keyframes animStar {
+        from {
+          transform: translateY(0);
+        }
+      
+        to {
+          transform: translateY(-135rem);
+        }
+      }
+      
+      @keyframes animStarRotate {
+        from {
+          transform: rotate(360deg);
+        }
+      
+        to {
+          transform: rotate(0);
+        }
+      }
+      
+      @keyframes gradient_301 {
+        0% {
+          background-position: 0% 50%;
+        }
+      
+        50% {
+          background-position: 100% 50%;
+        }
+      
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      
+      @keyframes pulse_3011 {
+        0% {
+          transform: scale(0.75);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+        }
+      
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        }
+      
+        100% {
+          transform: scale(0.75);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+      }
+ */
+
+.hemBurg-menu{
+  /* border: 2px solid red; */
+  position: relative;
+  /* background-color: ; */
+  height: 800px;
+  z-index: 1;
+  padding: 20px !important;
+}
+.innerHemBurg-menu{
+  border: 2px solid #664dff;
+  border-radius: 20px;
+  box-shadow: 0px -2px 100px 0px #664dff33;
+  /* background: radial-gradient(276.06% 127.18% at 50% 0%, rgba(0, 0, 0, 0.00) 45.5%, rgba(102, 51, 238, 0.30) 82.19%, #FFF 100%); */
+  height: 85%;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-decoration: dotted; */
+}
+
+
+/* .hemBurg-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../public/revenue_bg.png") no-repeat center center;
+  background-size: cover;
+  filter: blur(100px);
+  z-index: -1; 
+} */
+
+ /* .hemBurg-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: inherit;
+  backdrop-filter: blur(500px) !important;
+  filter: blur(100px) !important;
+  z-index: -1;
+} 
+       */
+.btn2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 2px solid #4467FF;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  overflow: hidden;
+  transition: all 0.02s;
+  width: 12rem;
+  height: 3.7rem;
+  font-weight: bold;
+  color: white !important;
+  z-index: 2;
+  box-shadow: 0px 0px 7.107px 0px rgba(119, 68, 255, 0.70);
+  background: radial-gradient(58.25% 50% at 50% 0%, #071a69 0%, #010314 71.5%);
+
+}
+.navStrong{
+  z-index: 2;
+  color: white !important;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  
+}
+
+
+.btn2:hover {
+  background: radial-gradient(58.25% 50% at 50% 0%, #071a69 0%, #010314 71.5%);
+  color: white;
+}
+
+.btn2:active {
+  transform: scale(0.97);
+}
+
+.nav-hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.nav-hoverEffect div {
+  background: linear-gradient(90deg, hsl(214, 96%, 53%) 0%, hsl(234, 90%, 4%) 49%, hsl(234, 90%, 4%) 100%);
+
+  border-radius: 40rem;
+  width: 13rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.btn2:hover .nav-hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+
+  0% {
+    transform: rotate(0deg);
+  }
+ 
+  100% {
+    transform: rotate(360deg);
+}
+}
+
+ 
+
+
+
+
+
+
+      
+
+/* lower right button */
+/* .newBtn2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 48px;
+  border: 1px solid #4467FF;
+  box-shadow: 0px 0px 7.107px 0px rgba(119, 68, 255, 0.70);
+
+  width: 11rem;
+  overflow: hidden;
+  height: 56px;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #8F51EA 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+} */
+
+
+.newBtn2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 2px solid #4467FF;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.02s;
+  width: 11rem;
+  height: 3.5rem;
+  font-weight: bold;
+  color: white !important;
+  z-index: 2;
+  box-shadow: 0px 0px 7.107px 0px rgba(119, 68, 255, 0.70);
+  background: radial-gradient(58.25% 50% at 50% 0%, #071a69 0%, #010314 71.5%);
+
+}
+.navStrong1{
+  z-index: 2;
+  color: white !important;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  
+}
+
+
+.newBtn2:hover {
+  background: radial-gradient(58.25% 50% at 50% 0%, #071a69 0%, #010314 71.5%);
+  color: white;
+}
+
+.newBtn2:active {
+  transform: scale(0.97);
+}
+
+.nav-hoverEffect1 {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.nav-hoverEffect1 div {
+  background: linear-gradient(90deg, hsl(214, 96%, 53%) 0%, hsl(234, 90%, 4%) 49%, hsl(234, 90%, 4%) 100%);
+
+  border-radius: 40rem;
+  width: 13rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.newBtn2:hover .nav-hoverEffect1 div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+
+  0% {
+    transform: rotate(0deg);
+  }
+ 
+  100% {
+    transform: rotate(360deg);
+}
+}
+
+
+
+        
+@media (max-width: 1145px) and (min-width: 1024px) {
+  
+  .nav-logo-container img{
+    height: 30px !important;
+  }
+  .nav-logo-container span{
+    height: 30px !important;
+    font-size: 16px;
+  }
+  .nav-middle-container div{
+margin-left: 5px;
+gap: 0px !important;
+  }
+  .nav-middle-container div a{
+font-size: 12px;
+      }
+      .nav-buttons .btn1 {
+        height: 46px;
+        padding: 16px 30px;
+    
+      }
+      .nav-buttons .btn2 {
+        width: 9.5rem;
+        height: 3.1rem;
+          
+      }
+}

@@ -1,0 +1,11 @@
+/* .faq-section{
+    border: 2px solid red;
+    height: 730px;
+
+} */
+
+@media (max-width: 425px) {
+    .faq-section{
+        margin-top: 40px !important;
+    }
+}

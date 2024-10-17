@@ -1,0 +1,355 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+  height: 2372px;
+  background-color: #010314;
+}
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
+.slider-containerMain {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  margin-top: -20px;
+  /* border-radius: 30px  ; */
+  /* height: 100vh; */
+  display: none;
+}
+.useCases-imgContainer img {
+  width: 25px !important;
+  height: 25px !important;
+}
+.useCases-imgContainer h2 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25.6px;
+  letter-spacing: 0.2em;
+  text-align: left;
+  background: linear-gradient(95.02deg, #4467ff 13.23%, #7241ff 81.63%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 500px) {
+  .slider-containerMain {
+    display: block;
+  }
+}
+
+.slider {
+  border: 2px solid #664dff;
+  border-radius: 42px;
+  box-shadow: 0px -2px 100px 0px #664dff33;
+  background: radial-gradient(
+    276.06% 127.18% at 50% 0%,
+    rgba(0, 0, 0, 0) 45.5%,
+    rgba(102, 51, 238, 0.3) 82.19%,
+    #fff 100%
+  );
+
+  --slide-duration: 500ms;
+  width: 100%;
+  height: 360px;
+  position: relative;
+
+  & > .controls {
+    width: 100%;
+    /* height: 100%; */
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    g & > .control {
+      /* border: 2px solid red; */
+      width: 100px;
+      cursor: pointer;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      text-shadow: -1px 0px 5px rgba(0, 0, 0, 1);
+      font-size: 3rem;
+
+      &.previous {
+        justify-content: flex-start;
+      }
+
+      &.next {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  & > .slides {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+
+    & > .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+
+      &[data-previous-slide="true"] {
+        opacity: 1;
+        transform: translateX(-100%);
+      }
+
+      &[data-current-slide="true"] {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      &[data-next-slide="true"] {
+        opacity: 1;
+        transform: translateX(100%);
+      }
+
+      &.center,
+      &.left,
+      &.right {
+        transition: all var(--slide-duration);
+        opacity: 1;
+      }
+
+      &.center {
+        transform: translateX(0);
+      }
+
+      &.left {
+        transform: translateX(-100%);
+      }
+
+      &.right {
+        transform: translateX(100%);
+      }
+
+      & > .text-container {
+        /* background:#fff9; */
+        position: absolute;
+        padding: 1rem;
+        max-width: 50%;
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  & > .slide-pills {
+    z-index: 2;
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    gap: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & > .slide-pill {
+      cursor: pointer;
+      font-size: 0.7em;
+      padding: 0.2rem 1rem;
+      /* background: #000; */
+      color: #fff;
+      border-radius: 4px;
+      transition: all var(--slide-duration);
+      pointer-events: none;
+
+      &.active {
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
+}
+
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+.cardanimated {
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.cardanimated:hover {
+  transform: scale(1.05); /* Zoom-in effect */
+}
+.stars-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #fff;
+}
+
+.star:nth-child(1) {
+  width: 30px;
+  height: 30px;
+}
+
+.star:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  top: -100px;
+  left: -50px;
+}
+
+.star:nth-child(3) {
+  width: 10px;
+  height: 10px;
+  top: 100px;
+  left: 50px;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.star1 {
+  animation: blink 1.5s infinite;
+  animation-delay: 0s;
+}
+
+.star2 {
+  animation: blink 1.5s infinite;
+  animation-delay: 0.5s; /* Delay for the second star */
+}
+
+.star3 {
+  animation: blink 1.5s infinite;
+  animation-delay: 1s; /* Delay for the third star */
+}
+
+/* @keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px #4467ff);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #7241ff);
+  }
+}
+
+.star {
+  animation: blink 1.5s infinite, glow 1.5s infinite;
+} */
+/* @keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.star-group {
+  animation: rotate 5s linear infinite;
+  transform-origin: center center;
+} */

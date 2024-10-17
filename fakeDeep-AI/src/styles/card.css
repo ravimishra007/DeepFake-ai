@@ -1,0 +1,390 @@
+/* herosection.css */
+
+.card-Section{
+  /* border: 2px solid orange; */
+position: relative;
+width: 100%;
+  }
+.star-container01 {
+
+  position: absolute;
+  top: 90px;
+  left: 135px;
+  height: 300px;
+  width: 150px;
+}
+
+.star-container02 {
+  /* border: 2px solid white; */
+  position: absolute;
+  top: 90px;
+  right: 130px;
+  height: 300px;
+  width: 150px;
+
+}
+.star-container03 {
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 135px;
+  left: 250px;
+  width: 200px;
+
+}
+.star-container04{
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 135px;
+  right: 230px;
+  width: 200px;
+
+}
+.star-container01, .star-container03, .star-container02, .star-container04 {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-out;
+}
+
+.star-container01.animate, .star-container03.animate {
+  animation: slideInRotateLeft 4s ease-out forwards;
+}
+@keyframes slideInRotateLeft {
+  0% {
+    transform: translateX(-100%) rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.star-container02.animate, .star-container04.animate {
+  animation: slideInRotateRight 4s ease-out forwards;
+}
+
+@keyframes slideInRotateRight {
+  0% {
+    transform: translateX(100%) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+
+.HeroSection-container {
+  margin-top: 100px !important;
+  /* margin-left: -100px !important; */
+  height:auto;
+  padding: 20px;
+  background: radial-gradient(
+    217.23% 100.08% at 50% 18.33%,
+    rgba(0, 0, 0, 0) 21.67%,
+    #6633ee 69.34%,
+    #ffffff 100%
+  );
+  border-top: 5px solid #664dff;
+  /* border-top: 2px solid red; */
+  border-radius: 50px;
+  box-shadow: 0px 4px 100px 0px #664dff33;
+  /* filter: drop-shadow(1px 1px 5px #664DFF) */
+}
+
+.HeroSection-InnerContainer{
+  width: 70%;
+  margin: auto;
+}
+.HeroSection-InnerContainer h1 {
+  font-family: Outfit;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64.8px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffffff 30%,
+    rgba(255, 255, 255, 0.5) 84.77%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .HeroSection-InnerContainer button {
+  
+  width: 200.47px; 
+  height: 66px; 
+  padding: 20px 48px 20px 48px;
+  border-radius: 100px;
+  background: radial-gradient(58.25% 50% at 50% 0%, #071a69 0%, #010314 71.5%);
+  box-shadow: 0px 0px 7.107px 0px rgba(119, 68, 255, 0.70);
+  border-top: 3px solid #4467FF;
+
+} */
+
+
+
+
+
+.cardButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 15px 30px; */
+  border: 2px solid #4467FF;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  transition: all 0.02s;
+  width: 16rem;
+  height: 4rem;
+
+  font-weight: bold;
+  color: white !important;
+  z-index: 2;
+  box-shadow: 0px 0px 7.107px 0px rgba(119, 68, 255, 0.70);
+  background: radial-gradient(58.25% 50% at 50% 0%, #071a69 0%, #010314 71.5%);
+
+}
+.cardStrong{
+  z-index: 2;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  
+}
+
+.cardButton:hover {
+  background: radial-gradient(58.25% 50% at 50% 0%, #071a69 0%, #010314 71.5%);
+  color: white;
+}
+
+.cardButton:active {
+  transform: scale(0.97);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hoverEffect div {
+  background: linear-gradient(90deg, hsl(214, 96%, 53%) 0%, hsl(234, 90%, 4%) 49%, hsl(234, 90%, 4%) 100%);
+
+  border-radius: 40rem;
+  width: 13rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.cardButton:hover .hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+
+  0% {
+    transform: rotate(0deg);
+  }
+ 
+  100% {
+    transform: rotate(360deg);
+}
+}
+
+
+
+@media (max-width: 1324px) {
+  .HeroSection-container {
+    width: 92% !important;
+    height: auto;
+    margin: auto;
+  }
+  .HeroSection-InnerContainer {
+    width: 100%;
+    margin: auto;
+  }
+  .star-container01 {
+    top: 120px;
+    left: 70px;
+    height: auto;
+    width: 100px;
+  }
+  .star-container02 {
+    top: 120px;
+    right: 70px;
+    height: auto;
+    width: 100px;
+  
+  }
+  .star-container03 {
+    top: 155px;
+    left: 150px;
+    width: 130px;
+  
+  }
+  .star-container04{
+    top: 155px;
+    right: 150px;
+    width: 130px;
+  
+  }
+}
+
+@media (max-width: 1025px) {
+  .HeroSection-container {
+    margin-top: 50px !important;
+  }  
+  .star-container01 {
+    top: 120px;
+    left: 10px;
+    height: auto;
+    width: 100px;
+  }
+  .star-container02 {
+    top: 120px;
+    right: 10px;
+    height: auto;
+    width: 100px;
+  
+  }
+  .star-container03 {
+    top: 155px;
+    left: 70px;
+    width: 130px;
+  
+  }
+  .star-container04{
+    top: 155px;
+    right: 70px;
+    width: 130px;
+  
+  }
+}
+
+@media (max-width: 770px) {
+  .card-Section {
+    margin-top: -70px !important;
+  }
+  .star-container01 {
+    top: 170px;
+    width: 90px;
+  }
+  .star-container02 {
+    top: 170px;
+    width: 90px;
+  
+  }
+  .star-container03 {
+    top: 210px;
+    left: 70px;
+    width: 100px;
+  
+  }
+  .star-container04{
+    top: 210px;
+    right: 70px;
+    width: 100px;
+  
+  }
+}
+
+@media (max-width: 681px) {
+  .card-Section {
+    margin-top: -140px !important;
+  }
+  .HeroSection-container {
+    width: 92% !important;
+    height: auto;
+  }
+  .HeroSection-InnerContainer{
+    width: 100%;
+    margin: auto;
+    /* border: 2px solid red; */
+  }
+  .HeroSection-InnerContainer h1 {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 44.8px;
+
+    /* border: 2px solid green; */
+  }
+  .HeroSection-InnerContainer p {
+    /* border: 2px solid green; */
+    font-size: 15px;
+  }
+}
+@media (max-width: 501px) {
+  .HeroSection-container {
+    padding: 0%;
+    height: 370px;
+    /* height: auto; */
+    margin-top: 10px !important;
+  }
+  .HeroSection-InnerContainer {
+    padding: 10px;
+  }
+  .HeroSection-InnerContainer h1 {
+    width: 100%;
+    padding: 0px;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 35.8px;
+  }
+  .HeroSection-InnerContainer p {
+    padding: 2px;
+    width: 100%;
+    margin: auto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20.8px;
+    margin-bottom: 20px;
+  }
+  .HeroSection-InnerContainer button {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 100px;
+  }
+}
+@media (max-width: 501px) {
+  .card-Section{
+    margin-top: 130px !important;
+  }
+}
+@media (max-width:450px) {
+  .HeroSection-InnerContainer h1{
+    text-align: center;
+font-family: Roboto;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 24px */
+  }
+  .HeroSection-InnerContainer p {
+    /* border: 2px solid red; */
+    color: var(--Paragraph, #77798F);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+  }
+}
